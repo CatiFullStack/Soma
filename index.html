@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soma/DOM</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="principal">
+            <img src="https://images.pexels.com/photos/3767411/pexels-photo-3767411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <p class="text">Sofrendo para somar? Temos a solução!</p>
+        </div>
+
+
+        <div class="conteudo">
+    <h1>Some aqui</h1>
+    <p><strong>Digite</strong> abaixo o número para efetuar a soma</p>
+
+    <div class="btns">
+    <input type="number" name="valor1" id="valor1"> +
+    <input type="number" name="valor2" id="valor2">
+    <input type="button" value="somar" onclick="somar()">
+    </div>
+    </div>
+
+    <div id="resp">Resposta</div>
+
+</div>
+
+    <script>
+    function somar() {
+        var v1 = window.document.getElementById('valor1');
+        var v2 = window.document.querySelector ('input#valor2');
+        var resp = window.document.querySelector ('div#resp');
+
+        var n1 = Number(v1.value);
+        var n2 = Number(v2.value);
+        var resultado = n1 + n2;
+
+        resp.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${resultado}.`;
+
+    }
+
+    </script>
+</body>
+</html>
